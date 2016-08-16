@@ -1,0 +1,110 @@
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+#include<cstring>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int n,i;
+    long long int a,k,b;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%lld",&a);
+        for(k=1000000000;k>=1;k=k/10)
+        {
+            if(a%k==0)
+            {
+                b=a/(k);
+                if(b%(10)==5)
+                {
+                    a=a*4;
+                    for(k=1000000000;k>=1;k=k/10)
+                    {
+                        if(a%k==0)
+                        {
+                            b=a/(k);
+                            if(b%(10)==5)
+                            {
+                                a=a*4;
+                                for(k=10000000000;k>=1;k=k/10)
+                                {
+                                    if(a%k==0)
+                                    {
+                                        b=a/(k);
+                                        if(b%(10)==5)
+                                        {
+                                            a=a*4;
+                                            for(k=100000000000;k>=1;k=k/10)
+                                            {
+                                                if(a%k==0)
+                                                {
+                                                    b=a/(k);
+                                                    if(b%(10)==5)
+                                                    {
+                                                        a=a*4;
+                                                        for(k=1000000000000;k>=1;k=k/10)
+                                                        {
+                                                            if(a%k==0)
+                                                            {
+                                                                b=a/(k);
+                                                                if(b%(10)==5)
+                                                                {
+                                                                    a=a*4;
+                                                                    for(k=10000000000000;k>=1;k=k/10)
+                                                                    {
+                                                                        if(a%k==0)
+                                                                        {
+                                                                            b=a/(k);
+                                                                            if(b%(10)==5)
+                                                                            {
+                                                                                a=a*4;
+                                                                                for(k=100000000000000;k>=1;k=k/10)
+                                                                                {
+                                                                                    if(a%k==0)
+                                                                                    {
+                                                                                        b=a/(k);
+                                                                                        if(b%(10)==5)
+                                                                                        {
+                                                                                            a=a*4;
+                                                                                            for(k=1000000000000000;k>=1;k=k/10)
+                                                                                            {
+                                                                                                if(a%k==0)
+                                                                                                {
+                                                                                                    b=a/(k);
+                                                                                                    if(b%(10)==5)
+                                                                                                        a=a*4;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    break;
+                }
+                else
+                {
+                    a=a;
+                    break;
+                }
+            }
+        }
+        printf("%lld\n",a);
+    }
+    return 0;
+}
